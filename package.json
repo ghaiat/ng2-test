@@ -6,7 +6,7 @@
     "tslint": "tslint -c tslint.json \"src/**/*.ts\" \"test/**/*.ts\" \"fuse/**/*.ts\" ",
     "eslint": "eslint .",
     "lint": "npm run tslint && npm run eslint",
-    "start": "webpack-dev-server --inline --progress --port 4000",
+    "start": "webpack-dev-server --inline --progress --port 5000",
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "postinstall": "typings install"
