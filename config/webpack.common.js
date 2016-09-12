@@ -2,7 +2,12 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 var helpers = require('./helpers');
+const path = require('path');
+
+var distFolder = path.join('dist'); //, target, mode);
 
 module.exports = {
     entry: {
@@ -22,6 +27,14 @@ module.exports = {
         }, {
             test: /\.html$/,
             loader: 'html'
+        }, {
+            test: /\.ngux$/,
+            loader: 'ngux-loader',
+            query: {
+                subdir: 'ngux',
+                noEmitUx: true,
+                outputRoot: path.join(path.resolve(distFolder), 'ux')
+            }
         }, {
             test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
             loader: 'file?name=assets/[name].[hash].[ext]'

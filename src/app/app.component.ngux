@@ -1,0 +1,3 @@
+<Panel ng:Selector="my-app" Color="Red" Width="200" Height="200">
+
+</Panel>

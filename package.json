@@ -8,7 +8,8 @@
     "lint": "npm run tslint && npm run eslint",
     "start": "webpack-dev-server --inline --progress --port 5000",
     "test": "karma start",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "build:dev": "rimraf dist && webpack --config config/webpack.dev.js --progress --profile",
+    "build:prod": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "postinstall": "typings install"
   },
   "license": "MIT",
@@ -22,12 +23,15 @@
     "@angular/platform-browser-dynamic": "2.0.0-rc.6",
     "@angular/router": "3.0.0-rc.2",
     "core-js": "^2.4.1",
+    "parse5": "^1.5.1",
+    "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.11",
     "zone.js": "^0.6.17"
   },
   "devDependencies": {
     "angular2-template-loader": "^0.4.0",
     "codelyzer": "0.0.28",
+    "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.23.1",
     "eslint": "^3.5.0",
     "eslint-plugin-nodeca": "^1.0.3",
@@ -41,6 +45,7 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
+    "ngux-loader": "mcfly-io/ngux-loader",
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.7",
     "raw-loader": "^0.5.1",

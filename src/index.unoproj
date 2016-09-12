@@ -1,0 +1,26 @@
+{
+  "RootNamespace":"",
+  "Version": "0.0.1",
+  "VersionCount": 1,
+  "Title": "Yoobic",
+  "Copyright": "Copyright (C) 2016",
+  "Publisher": "Yoobic",
+  "Mobile": {
+    "KeepAlive": false,
+    "ShowStatusbar": true,
+    "RunsInBackground": true,
+    "Orientations": "Portrait"
+  },
+  "Packages": [
+        "Fuse",
+        "FuseJS",
+        "Fuse.GeoLocation",
+        "Fuse.Camera",
+        "Fuse.PushNotifications",
+        "Fuse.LocalNotifications"
+  ],
+  "Includes": [
+    "*",
+    "**.js:Bundle"
+  ]
+}
